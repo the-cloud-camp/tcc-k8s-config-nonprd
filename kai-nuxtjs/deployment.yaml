@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: kai-nuxtjs
+  namespace: dev
+spec:
+  selector:
+    matchLabels:
+      app: kai-nuxtjs
+  template:
+    metadata:
+      labels:
+        app: kai-nuxtjs
+    spec:
+      containers:
+      - name: kai-nuxtjs
+        image: ghcr.io/the-cloud-camp/project-demo:sha256-626406e4af241f2c7969dbff413ce75b623837023a86defc9382d11df93ca083.sig
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+        ports:
+        - containerPort: 3000
