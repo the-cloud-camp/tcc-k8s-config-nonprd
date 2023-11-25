@@ -4,6 +4,7 @@ metadata:
   name: kai-nuxtjs
   namespace: dev
 spec:
+  revisionHistoryLimit: 2
   selector:
     matchLabels:
       app: kai-nuxtjs
