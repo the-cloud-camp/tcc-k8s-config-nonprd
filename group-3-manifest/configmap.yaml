@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: group-3-nuxtjs
+data:
+  # property-like keys; each key maps to a simple value
+  initial_values: "Hello Group 3"
