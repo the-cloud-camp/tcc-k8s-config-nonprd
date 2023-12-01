@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: kai-nuxtjs
-          image: ghcr.io/the-cloud-camp/project-demo:ghcr.io/the-cloud-camp/project-demo:dev-d150c22
+          image: ghcr.io/the-cloud-camp/project-demo:dev-066d5f3
           resources:
             limits:
               memory: "128Mi"
