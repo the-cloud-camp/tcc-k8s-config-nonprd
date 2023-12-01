@@ -1,7 +1,7 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: group-5-ingress
+  name: group-5-ingresss
   namespace: group-5-dev
   annotations:
     nginx.ingress.kubernetes.io/backend-protocol: HTTP
