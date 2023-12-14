@@ -1,0 +1,22 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: group-5-ingress2
+  namespace: group-5-dev
+  annotations:
+    nginx.ingress.kubernetes.io/backend-protocol: HTTP
+    nginx.ingress.kubernetes.io/rewrite-target: /$2
+  labels:
+    name: group-5-app2
+spec:
+  rules:
+  - host: tcc-01.th1.proen.cloud
+    http:
+      paths:
+      - pathType: Prefix
+        path: "/group-5(/|$)(.*)"
+        backend:
+          service:
+            name: group-5-service2
+            port: 
+              number: 80

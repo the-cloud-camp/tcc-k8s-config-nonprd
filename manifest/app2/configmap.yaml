@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: group-5-configmap2
+data:
+  # property-like keys; each key maps to a simple value
+  initial_values: "Hello2"
