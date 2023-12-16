@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: my-configmap-group-6
+  namespace: group-6-dev
+data:
+  config-file-1.yaml: |
+    key1: value1
+    key2: value2
+  config-file-2.properties: |
+    property1=value1
+    property2=value2

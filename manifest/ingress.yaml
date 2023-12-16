@@ -13,7 +13,7 @@ spec:
   # - host: localhost
     http:
       paths:
-      - path: "/group-6-dev-marketplace(/|$)(.*)"
+      - path: "/group-6-dev-marketplace"
         pathType: Prefix
         backend:
           service:
