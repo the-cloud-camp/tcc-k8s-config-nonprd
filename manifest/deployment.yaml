@@ -50,8 +50,8 @@ spec:
         - name: mysql
           image: mysql
           imagePullPolicy: "IfNotPresent"
-          command:
-            - "--default-authentication-plugin=mysql_native_password"
+          # command:
+          #   - "--default-authentication-plugin=mysql_native_password"
           # restart: always
           env:
             - name: MYSQL_ROOT_PASSWORD
