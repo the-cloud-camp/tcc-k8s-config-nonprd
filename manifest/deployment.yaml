@@ -18,27 +18,22 @@ spec:
           image: nutbodyslam053/group-6-marketplace:v1
           imagePullPolicy: "IfNotPresent"
           ports:
-          - containerPort: 8081
+            - containerPort: 8081
         - name: mysql
           image: mysql
           imagePullPolicy: "IfNotPresent"
-          command: --default-authentication-plugin=mysql_native_password
+          command:
+            - "--default-authentication-plugin=mysql_native_password"
           # restart: always
-          environment:
-            MYSQL_ROOT_PASSWORD: example
-            MYSQL_DATABASE: db
+          env:
+            - name: MYSQL_ROOT_PASSWORD
+              value: example
+            - name: MYSQL_DATABASE
+              value: db
           ports:
             - containerPort: 3306
-          volumes:
-            - ./mysql-data:/var/lib/mysql
         - name: adminer
           image: adminer
           # restart: always
           ports:
             - containerPort: 8080
-
-        #   envFrom:
-        # - secretRef:
-        #   name: my-secret
-        # - configMapRef:
-        #   name: my-configmap
