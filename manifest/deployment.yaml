@@ -19,6 +19,17 @@ spec:
           imagePullPolicy: "IfNotPresent"
           ports:
             - containerPort: 8081
+          env:
+            - name: SECRET_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: my-secret-group-6
+                  key: SECRET_KEY
+            - name: MYSQL_DNS
+              valueFrom:
+                secretKeyRef:
+                  name: my-secret-group-6
+                  key: MYSQL_DNS
 ---
 apiVersion: apps/v1
 kind: Deployment
