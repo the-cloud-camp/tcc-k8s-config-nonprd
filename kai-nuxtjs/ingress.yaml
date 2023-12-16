@@ -15,6 +15,6 @@ spec:
         path: "/kai-nuxtjs-dev"
         backend:
           service:
-            name: kai-nuxtjs-dev
+            name: kai-nuxtjs-service-dev
             port: 
               number: 3000
