@@ -7,6 +7,7 @@ metadata:
     name: kai-nuxtjs-dev
 spec:
   rules:
+  ingressClassName: nginx
   - host: tcc-01.th1.proen.cloud
     http:
       paths:
