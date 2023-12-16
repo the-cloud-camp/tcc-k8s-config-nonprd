@@ -3,19 +3,29 @@ kind: Ingress
 metadata:
   name: my-ingress-group-6
   namespace: group-6-dev
-  annotations:
-    nginx.ingress.kubernetes.io/backend-protocol: HTTP
-    nginx.ingress.kubernetes.io/rewrite-target: /$2
+  # annotations:
+  #   nginx.ingress.kubernetes.io/backend-protocol: HTTP
+  #   nginx.ingress.kubernetes.io/rewrite-target: /$2
 spec:
   ingressClassName: nginx
   rules:
   - host: tcc-01.th1.proen.cloud
     http:
       paths:
-      - path: /group-6-dev
+      - path: /group-6-dev-marketplace
         pathType: Prefix
         backend:
           service:
             name: my-service-group-6
             port:
               number: 8081
+  - host: tcc-01.th1.proen.cloud
+    http:
+      paths:
+      - path: /group-6-db-dev
+        pathType: Prefix
+        backend:
+          service:
+            name: my-db-group-6
+            port:
+              number: 3306
