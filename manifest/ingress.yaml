@@ -12,7 +12,7 @@ spec:
   - host: tcc-01.th1.proen.cloud
     http:
       paths:
-      - path: "/group-6-dev-marketplace"
+      - path: /group-6-dev
         pathType: Prefix
         backend:
           service:
