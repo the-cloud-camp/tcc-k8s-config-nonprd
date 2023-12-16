@@ -10,7 +10,6 @@ spec:
   ingressClassName: nginx
   rules:
   - host: tcc-01.th1.proen.cloud
-  # - host: localhost
     http:
       paths:
       - path: "/group-6-dev-marketplace"

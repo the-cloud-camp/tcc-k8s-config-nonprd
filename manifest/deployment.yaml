@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: my-deployment-group-6
+  name: my-app-deployment-group-6
   namespace: group-6-dev
 spec:
   replicas: 1
@@ -12,6 +12,28 @@ spec:
     metadata:
       labels:
         app: my-app-group-6
+    spec:
+      containers:
+        - name: my-container-group-6
+          image: nutbodyslam053/group-6-marketplace:v1
+          imagePullPolicy: "IfNotPresent"
+          ports:
+            - containerPort: 8081
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-db-deployment-group-6
+  namespace: group-6-dev
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: my-db-group-6
+  template:
+    metadata:
+      labels:
+        app: my-db-group-6
     spec:
       containers:
         - name: mysql
@@ -27,13 +49,3 @@ spec:
               value: db
           ports:
             - containerPort: 3306
-        - name: adminer
-          image: adminer
-          # restart: always
-          ports:
-            - containerPort: 8080
-        - name: my-container-group-6
-          image: nutbodyslam053/group-6-marketplace:v1
-          imagePullPolicy: "IfNotPresent"
-          ports:
-            - containerPort: 8081

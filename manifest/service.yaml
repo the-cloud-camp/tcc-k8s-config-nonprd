@@ -11,3 +11,17 @@ spec:
       port: 8081
       targetPort: 8081
   type: ClusterIP
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: my-db-group-6
+  namespace: group-6-dev
+spec:
+  selector:
+    app: my-db-group-6
+  ports:
+    - protocol: TCP
+      port: 3306
+      targetPort: 3306
+  type: ClusterIP
