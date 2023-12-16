@@ -2,7 +2,7 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: my-ingress-group-6
-  namespace: dev
+  namespace: group-6-app
   annotations:
     nginx.ingress.kubernetes.io/backend-protocol: HTTP
     nginx.ingress.kubernetes.io/rewrite-target: /$2
@@ -10,12 +10,13 @@ spec:
   ingressClassName: nginx
   rules:
   - host: tcc-01.th1.proen.cloud
+  # - host: localhost
     http:
       paths:
-      - path: "/nutbodyslam053(/|$)(.*)"
+      - path: "/group-6-app(/|$)(.*)"
         pathType: Prefix
         backend:
           service:
             name: my-service-group-6
             port:
-              number: 8080
+              number: 8081
