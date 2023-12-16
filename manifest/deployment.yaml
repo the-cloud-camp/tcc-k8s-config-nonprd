@@ -4,7 +4,7 @@ metadata:
   name: my-deployment-group-6
   namespace: group-6-dev
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app: my-app-group-6
@@ -14,11 +14,6 @@ spec:
         app: my-app-group-6
     spec:
       containers:
-        - name: my-container-group-6
-          image: nutbodyslam053/group-6-marketplace:v1
-          imagePullPolicy: "IfNotPresent"
-          ports:
-            - containerPort: 8081
         - name: mysql
           image: mysql
           imagePullPolicy: "IfNotPresent"
@@ -37,3 +32,8 @@ spec:
           # restart: always
           ports:
             - containerPort: 8080
+        - name: my-container-group-6
+          image: nutbodyslam053/group-6-marketplace:v1
+          imagePullPolicy: "IfNotPresent"
+          ports:
+            - containerPort: 8081
