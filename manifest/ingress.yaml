@@ -2,7 +2,7 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: my-ingress-group-6
-  namespace: group-6-app
+  namespace: group-6-dev
   annotations:
     nginx.ingress.kubernetes.io/backend-protocol: HTTP
     nginx.ingress.kubernetes.io/rewrite-target: /$2
@@ -13,7 +13,7 @@ spec:
   # - host: localhost
     http:
       paths:
-      - path: "/group-6-app(/|$)(.*)"
+      - path: "/group-6-dev-marketplace(/|$)(.*)"
         pathType: Prefix
         backend:
           service:
