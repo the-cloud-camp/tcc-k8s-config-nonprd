@@ -1,11 +1,11 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: kai-nuxtjs
+  name: kai-nuxtjs-service-dev
   namespace: dev
 spec:
   selector:
-    app: kai-nuxtjs
+    app: kai-nuxtjs-dev
   ports:
   - port: 3000
     targetPort: 3000

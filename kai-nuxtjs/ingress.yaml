@@ -1,19 +1,19 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: kai-nuxtjs
+  name: kai-nuxtjs-ingress-dev
   namespace: dev
   labels:
-    name: kai-nuxtjs
+    name: kai-nuxtjs-dev
 spec:
   rules:
   - host: tcc-01.th1.proen.cloud
     http:
       paths:
       - pathType: Prefix
-        path: "/"
+        path: "/kai-nuxtjs-dev"
         backend:
           service:
-            name: kai-nuxtjs
+            name: kai-nuxtjs-dev
             port: 
               number: 3000

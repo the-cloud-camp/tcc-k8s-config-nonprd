@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: kai-nuxtjs
+  name: kai-nuxtjs-deployment-dev
   namespace: dev
 spec:
   revisionHistoryLimit: 2
   selector:
     matchLabels:
-      app: kai-nuxtjs
+      app: kai-nuxtjs-dev
   template:
     metadata:
       labels:
-        app: kai-nuxtjs
+        app: kai-nuxtjs-dev
     spec:
       containers:
-      - name: kai-nuxtjs
+      - name: kai-nuxtjs-dev
         image: ghcr.io/the-cloud-camp/project-demo:dev-41729da
         resources:
           limits:
