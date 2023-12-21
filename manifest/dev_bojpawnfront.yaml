@@ -19,7 +19,7 @@ spec:
         app: bojpawnfront
     spec:
       containers:
-        - image: pingkunga/bojpawnfront:dev-5056614
+        - image: pingkunga/bojpawnfront:dev-3ab2e98
           imagePullPolicy: Always
           name: bojpawnfront
           ports:
