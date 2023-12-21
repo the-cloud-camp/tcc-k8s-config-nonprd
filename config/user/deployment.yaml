@@ -19,10 +19,8 @@ spec:
         app: tcc-2-user
     spec:
       containers:
-      - image: korawitry/tcc-2-user:b0e81abf87f842dee8411b5bcb2469f8cb0a8b16
-        name: tcc-2-user
-        ports:
-        - containerPort: 8003
-
-
+        - image: korawitry/tcc-2-user:d211912167ebf3823a0010c2d226f71b43ff6a11
+          name: tcc-2-user
+          ports:
+            - containerPort: 8003
 status: {}
