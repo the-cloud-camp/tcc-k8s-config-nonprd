@@ -7,7 +7,7 @@ metadata:
   labels:
     app: shobteeprajump-email-app
 spec:
-  replicas: 3
+  replicas: 1
   selector:
     matchLabels:
       app: shobteeprajump-email-app
@@ -20,7 +20,7 @@ spec:
     spec:
       containers:
       - name: shobteeprajump-email-app
-        image: diskette42/shobteeprajump-email-app:3.0.0
+        image: justtod/shobteeprajump-email-server:v0.4.2
         env:
           - name: RABBITMQ_SVC
             value: group4-rabbitmq.group-4-dev:5672
