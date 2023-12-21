@@ -3,6 +3,6 @@ kind: ConfigMap
 metadata:
   name: group-4-configmap-dev
   namespace: dev
-data:
+#data:
   # property-like keys; each key maps to a simple value
-  initial_values: "Hello"
+  #initial_values: "Hello"
