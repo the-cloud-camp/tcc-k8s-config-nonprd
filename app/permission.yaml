@@ -1,0 +1,19 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: app-group-2-permission
+  namespace: argocd
+  labels:
+    group: group-2
+spec:
+  project: default
+  source: 
+    repoURL: git@github.com:the-cloud-camp/tcc-k8s-config-nonprd.git
+    targetRevision: group-2
+    path: config/permission
+  destination:
+    name: in-cluster
+    namespace: dev
+  syncPolicy:
+    automated:
+      prune: true
