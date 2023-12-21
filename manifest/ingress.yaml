@@ -1,10 +1,10 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: groip-4-ingress-dev
-  namespace: dev
+  name: shobteeprajump-ingress
+  namespace: group-4-dev
   labels:
-    name: group-4-dev
+    name: shobteeprajump-ingress
 spec:
   ingressClassName: nginx
   rules:
@@ -12,9 +12,17 @@ spec:
     http:
       paths:
       - pathType: Prefix
-        path: "/group-4-dev"
+        path: "/group-4-dev/app"
         backend:
           service:
-            name: group-4-service-dev
+            name: shobteeprajump-service
             port: 
-              number: 3003
+              number: 3000
+      - pathType: Prefix
+        path: "/group-4-dev/ticket"
+        backend:
+          service:
+            name: shobteeprajump-producer-service
+            port: 
+              number: 8003
+

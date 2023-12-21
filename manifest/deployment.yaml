@@ -1,25 +1,33 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: group-4-deployment-dev
-  namespace: dev
+  name: shobteeprajump-deployment
+  namespace: group-4-dev
 spec:
   revisionHistoryLimit: 2
   selector:
     matchLabels:
-      app: group-4-dev
+      app: shobteeprajump-app
   template:
     metadata:
       labels:
-        app: group-4-dev
+        app: shobteeprajump-app
     spec:
       containers:
-      - name: frontend
-        image: justtod/shobteeprajump-client:v0.3.0
+      - name: shobteeprajump-app
+        image: justtod/shobteeprajump-client:v0.4.2
         imagePullPolicy: Always
         resources:
           limits:
             memory: "128Mi"
             cpu: "500m"
+        env:
+        - name: DATABASE_URL
+          value: mysql://user:user@group4-mysql.group-4-dev:3306/stockdb
+        - name: PORT
+          value: "3000"
+        - name: RABBITMQ_SVC
+          value: group4-rabbitmq.group-4-dev:5672
         ports:
-        - containerPort: 3003
+        - containerPort: 3000
+
