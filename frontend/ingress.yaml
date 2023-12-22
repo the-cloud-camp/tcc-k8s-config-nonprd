@@ -1,7 +1,7 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: frontend
+  name: frontend-ingress
   namespace: group-6-dev
   # annotations:
   #   nginx.ingress.kubernetes.io/backend-protocol: HTTP
@@ -16,6 +16,6 @@ spec:
           pathType: Prefix
           backend:
             service:
-              name: frontend
+              name: frontend-service
               port:
                 number: 3000
