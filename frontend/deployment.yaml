@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: frontend
+  namespace: group-6-dev
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: my-node
+  template:
+    metadata:
+      labels:
+        app: my-node
+    spec:
+      containers:
+        - name: my-container-frontend
+          image: node:20-alpine3.18
+          imagePullPolicy: "IfNotPresent"
+          ports:
+            - containerPort: 5000
+          # env:
+          #   - name: SECRET_KEY
+          #     valueFrom:
+          #       secretKeyRef:
+          #         name: my-secret-group-6
+          #         key: SECRET_KEY
+          #   - name: MYSQL_DNS
+          #     valueFrom:
+          #       secretKeyRef:
+          #         name: my-secret-group-6
+          #         key: MYSQL_DNS

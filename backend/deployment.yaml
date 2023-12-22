@@ -7,14 +7,14 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-      app: my-app-group-6
+      app: my-go
   template:
     metadata:
       labels:
-        app: my-app-group-6
+        app: my-go
     spec:
       containers:
-        - name: my-container-group-6
+        - name: my-container-backend
           image: nutbodyslam053/group-6-marketplace:v1.1
           imagePullPolicy: "IfNotPresent"
           ports:
@@ -40,11 +40,11 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-      app: my-db-group-6
+      app: my-db
   template:
     metadata:
       labels:
-        app: my-db-group-6
+        app: my-db
     spec:
       containers:
         - name: mysql
