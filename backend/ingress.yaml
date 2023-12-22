@@ -1,7 +1,7 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: backend
+  name: backend-ingress
   namespace: group-6-dev
   # annotations:
     # nginx.ingress.kubernetes.io/backend-protocol: HTTP
@@ -16,7 +16,7 @@ spec:
           pathType: Prefix
           backend:
             service:
-              name: backend
+              name: backend-service
               port:
                 number: 8081
     # - host: tcc-01.th1.proen.cloud
