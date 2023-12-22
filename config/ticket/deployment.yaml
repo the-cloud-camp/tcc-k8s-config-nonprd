@@ -19,7 +19,7 @@ spec:
         app: tcc-2-ticket
     spec:
       containers:
-        - image: korawitry/tcc-2-ticket:8c858664d8c64f9677f025c1c1e09d266f32e745
+        - image: korawitry/tcc-2-ticket:d0d4ea9d48b6ed5487611ec296e8b3ae43e90de3
           name: tcc-2-ticket
           ports:
             - containerPort: 8001
