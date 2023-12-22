@@ -7,11 +7,11 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-      app: my-go
+      app: backend
   template:
     metadata:
       labels:
-        app: my-go
+        app: backend
     spec:
       containers:
         - name: my-container-backend
@@ -40,14 +40,14 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-      app: my-db
+      app: mysql
   template:
     metadata:
       labels:
-        app: my-db
+        app: mysql
     spec:
       containers:
-        - name: mysql
+        - name: my-container-mysql
           image: mysql
           imagePullPolicy: "IfNotPresent"
           # command:
