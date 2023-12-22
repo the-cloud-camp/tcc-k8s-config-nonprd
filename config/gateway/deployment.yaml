@@ -19,7 +19,7 @@ spec:
         app: tcc-2-gateway
     spec:
       containers:
-        - image: korawitry/tcc-2-gateway:d211912167ebf3823a0010c2d226f71b43ff6a11
+        - image: korawitry/tcc-2-gateway:8c858664d8c64f9677f025c1c1e09d266f32e745
           name: tcc-2-gateway
           ports:
             - containerPort: 8000

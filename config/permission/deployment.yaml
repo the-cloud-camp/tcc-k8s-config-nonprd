@@ -19,7 +19,7 @@ spec:
         app: tcc-2-permission
     spec:
       containers:
-        - image: korawitry/tcc-2-permission:d211912167ebf3823a0010c2d226f71b43ff6a11
+        - image: korawitry/tcc-2-permission:8c858664d8c64f9677f025c1c1e09d266f32e745
           name: tcc-2-permission
           ports:
             - containerPort: 8005
