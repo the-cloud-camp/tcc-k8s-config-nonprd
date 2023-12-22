@@ -9,23 +9,23 @@ metadata:
 spec:
   ingressClassName: nginx
   rules:
-  - host: tcc-01.th1.proen.cloud
-    http:
-      paths:
-      - path: /group-6-api-dev
-        pathType: Prefix
-        backend:
-          service:
-            name: my-service-group-6
-            port:
-              number: 8081
-  - host: tcc-01.th1.proen.cloud
-    http:
-      paths:
-      - path: /group-6-db-dev
-        pathType: Prefix
-        db:
-          service:
-            name: my-db-group-6
-            port:
-              number: 3306
+    - host: tcc-01.th1.proen.cloud
+      http:
+        paths:
+        - path: /group-6-api-dev
+          pathType: Prefix
+          backend:
+            service:
+              name: my-service-group-6
+              port:
+                number: 8081
+    # - host: tcc-01.th1.proen.cloud
+    #   http:
+    #     paths:
+    #     - path: /group-6-db-dev
+    #       pathType: Prefix
+    #       db:
+    #         service:
+    #           name: my-db-group-6
+    #           port:
+    #             number: 3306
