@@ -15,10 +15,10 @@ spec:
     spec:
       containers:
         - name: my-container-frontend
-          image: node:20-alpine3.18
+          image: nutbodyslam053/group-6-app
           imagePullPolicy: "IfNotPresent"
           ports:
-            - containerPort: 5000
+            - containerPort: 3000
           # env:
           #   - name: SECRET_KEY
           #     valueFrom:
