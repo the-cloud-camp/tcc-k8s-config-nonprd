@@ -1,2 +1,6 @@
 # tcc-k8s-config
-Hello
+
+```bash
+user: admin
+pass: apzc70mmrUzwzmTf
+```
